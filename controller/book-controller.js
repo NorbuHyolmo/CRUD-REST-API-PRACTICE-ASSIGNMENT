@@ -42,5 +42,5 @@ exports.deleteBook = ((request,response)=>{
         })
     }
     book.splice(bookId, 1);
-    response.json(`the category with the id : ${request.params.id} has been deleted`);
+    response.json(`the book with the id : ${request.params.id} has been deleted`);
 })

@@ -7,10 +7,10 @@ router.get('/category',categoryController.getAllCategory);
 
 router.post('/category',categoryController.createCategory);
 
-router.get('/category/:id',categoryController.getCategoryById);
+router.get('/book/:id',categoryController.getCategoryById);
 
-router.put('/category/:id',categoryController.updateCategory);
+router.put('/book/:id',categoryController.updateCategory);
 
-router.delete('/category/:id',categoryController.deleteCategory);
+router.delete('/book/:id',categoryController.deleteCategory);
 
 module.exports = router;

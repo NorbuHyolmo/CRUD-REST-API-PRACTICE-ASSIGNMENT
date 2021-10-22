@@ -12,7 +12,7 @@ exports.getCategoryById = ((request,response)=>{
     let categoryId = category.find(catId => catId.id === parseInt(request.params.id))
     if(!categoryId){
         return response.status(404).json({
-            error: 'the user with provided id was not found'
+            error: `the category with provided id : ${request.params.id} was not found`
         })
     }
     response.json(categoryId);
@@ -22,7 +22,7 @@ exports.updateCategory = ((request,response)=>{
     let categoryId = category.findIndex(catId => catId.id === parseInt(request.params.id))
     if(categoryId=== -1){
         return response.status(404).json({
-            error: 'the user with provided id was not found'
+            error: `the category with provided id : ${request.params.id} was not found`
         })
     }
     category[categoryId].id = request.body.id;
@@ -35,7 +35,7 @@ exports.deleteCategory = ((request,response)=>{
     let categoryId = category.findIndex(catId => catId.id === parseInt(request.params.id))
     if(categoryId=== -1){
         return response.status(404).json({
-            error: 'the user with provided id was not found'
+            error: `the category with provided id : ${request.params.id} was not found`
         })
     }
     category.splice(categoryId, 1);
